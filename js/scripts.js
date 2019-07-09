@@ -11,7 +11,7 @@ var scoreboard = {
   player1Score: 0,
   player2Score: 0,
   firstPlayerTurn: true,
-  turnScore: 0,
+  turnScore: 5,
 };
 
 var addScore = function() {
@@ -21,13 +21,25 @@ var addScore = function() {
   else {
     scoreboard.player2Score = scoreboard.player2Score += scoreboard.turnScore;
   }
-  console.log(scoreboard)
+  scoreboard.turnScore = 0;
+  changeTurn();
+  console.log(scoreboard);
 };
 
+var changeTurn = function() {
+  scoreboard.firstPlayerTurn = !scoreboard.firstPlayerTurn;
+}
 //Dice Roll
 
 var diceRoll = function() {
   var x = Math.floor((Math.random() * 6) + 1);
+  if (x > 1) {
+    scoreboard.turnScore = x;
+    alert("you made it");
+  } else {
+    scoreboard.turnScore = 0;
+    changeTurn();
+  };
   console.log("the die roll is " + x);
 };
 
