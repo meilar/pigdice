@@ -13,21 +13,42 @@
 </head>
 
 <body>
-
   <div class="container">
-    <h1>Pig Dice!</h1>
-    <div class="instructions">
+    <div class="jumbotron">
+      <h1>Pig Dice!</h1>
+      <h3>Pig dice is a simple game of chance. Click the roll button to roll the die. Click roll again to raise your score. Careful! If you roll a 1, you lose your points... and your turn! Click the hold button to end your turn and keep your points.
+      </h3>
+    </div>
+    <div class="play-area row">
+      <div class="col-lg">
+        <div class="player1-box card">
+          <h2>Player 1</h2>
+          <h3>Score: <span id="player1-score"></span></h3>
+          <div class="player1-ui ui">
+            <p><span class="last-move"></span></p>
+            <button id="roll-1" class="button btn-md btn-info roll">Roll</button>
+            <button id="hold-1" class="button btn-md btn-success hold">Hold</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg">
+        <div class="player2-box card">
+          <h2>Player 2</h2>
+          <h3>Score: <span id="player2-score"></span></h3>
+          <div class="player2-ui ui">
+            <p><span class="last-move"></span></p>
+            <button id="roll-2" class="button btn-md btn-info roll">Roll</button>
+            <button id="hold-2" class="button btn-md btn-success hold">Hold</button>
+          </div>
+        </div>
+      </div>
 
     </div>
-  <div class="play-area">
-    <p>Player 1 Score <span id="player1Score"></span></p>
-    <p>Player 1 Score <span id="player2Score"></span></p>
-    <p>Turn Score <span id="turnScore"></span></p>
+    <div class="win-area">
+      <h1><span id="win-message"></span></h1>
+      <button class="btn btn-danger" id="restart">Play Again</button>
+    </div>
   </div>
-  <div class="win-message">
-
-  </div>
-</div>
 </body>
 
 </html>

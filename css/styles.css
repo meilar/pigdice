@@ -1,0 +1,17 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 20px;
+  padding: 20px;
+  height: 100%;
+}
+.player2-ui {
+  display: none;
+}
+.win-area {
+  display: none;
+  text-align: center;
+  font-size: 500%
+}
